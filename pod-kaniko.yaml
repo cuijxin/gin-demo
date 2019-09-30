@@ -11,7 +11,7 @@ spec:
             "--destination=cuijx/gin-demo:v0.0.1"]
     volumeMounts:
       - name: code
-        mountPath: /usr/code/go-demo
+        mountPath: /code/go-demo
       - name: docker-config
         mountPath: /kaniko/.docker/
   restartPolicy: Never
