@@ -24,7 +24,7 @@ spec:
         image: cuijx/atom-git:v0.0.1
         command: ["git", "clone", "https://github.com/cuijxin/gin-demo.git"]
         volumeMounts:
-        - mountPath: "/usr/code/go-demo"
+        - mountPath: "/code/go-demo"
           name: mypd
       restartPolicy: Never
       volumes:

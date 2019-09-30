@@ -6,8 +6,8 @@ spec:
   containers:
   - name: kaniko
     image: cuijx/executor
-    args: ["--dockerfile=/usr/code/go-demo/gin-demo/Dockerfile",
-            "--context=/usr/code/go-demo/gin-demo/",
+    args: ["--dockerfile=/code/go-demo/gin-demo/Dockerfile",
+            "--context=/code/go-demo/gin-demo/",
             "--destination=cuijx/gin-demo:v0.0.1"]
     volumeMounts:
       - name: code
