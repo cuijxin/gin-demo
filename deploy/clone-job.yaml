@@ -8,7 +8,7 @@ spec:
   resources:
     requests:
       storage: 8Gi
-  storageClassName: nfs
+  storageClassName: standard
 ---
 apiVersion: batch/v1
 kind: Job
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: clone-job
-        image: cuijx/atom-git:v0.0.1
+        image: cuijx/atom-git:v0.0.2
         command: ["git", "clone", "https://github.com/cuijxin/gin-demo.git"]
         volumeMounts:
         - mountPath: "/code/go-demo"

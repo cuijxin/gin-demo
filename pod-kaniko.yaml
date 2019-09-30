@@ -8,6 +8,7 @@ spec:
     image: cuijx/executor
     args: ["--dockerfile=/code/go-demo/gin-demo/Dockerfile",
             "--context=/code/go-demo/gin-demo/",
+            "--skip-tls-verify=true",
             "--destination=cuijx/gin-demo:v0.0.1"]
     volumeMounts:
       - name: code
