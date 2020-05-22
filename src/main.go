@@ -9,5 +9,6 @@ func main() {
 			"message": "pong",
 		})
 	})
-	r.Run()
+	//r.Run()
+	http.ListenAndServe(":80", r)
 }
