@@ -8,4 +8,4 @@ FROM alpine
 WORKDIR /webapp
 COPY --from=builder /go/src/gin-demo/src/gin-demo .
 ENTRYPOINT ["/webapp/gin-demo"]
-EXPOSE 8080
+EXPOSE 80
