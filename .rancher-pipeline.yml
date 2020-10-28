@@ -1,0 +1,21 @@
+stages:
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: cuijx/gin-demo
+  when:
+    event:
+      include:
+      - push
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deploy/deploy.yaml
+  when:
+    event:
+      include:
+      - push
+timeout: 60
+notification: {}
