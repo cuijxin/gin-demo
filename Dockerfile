@@ -2,9 +2,7 @@ FROM golang:1.14 as builder
 
 COPY . /go/src/gin-demo
 WORKDIR /go/src/gin-demo/src
-RUN go env -w GOPROXY=https://goproxy.cn,direct\
-    && go env -w GO111MODULE=on \
-    && go build -o gin-demo .
+RUN GO111MODULE=on CGO_ENABLED=0 GOOS=linux GOPROXY=https://goproxy.io go build -v -a -installsuffix cgo -o gin-demo .
 
 FROM alpine
 WORKDIR /webapp
