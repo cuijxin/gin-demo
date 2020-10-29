@@ -5,6 +5,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: cuijx/gin-demo
+      pushRemote: true
       registry: 127.0.0.1:34748
   when:
     event:
